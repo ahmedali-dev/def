@@ -1,0 +1,80 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "team": "Team",
+    "properties": "Properties",
+    "contact": "Contact Us",
+    "account": "Account",
+    "property": "Properties"
+  },
+  "home": {
+    "header": "Find Your Perfect Property",
+    "body": [
+      "We carefully select quality properties in Al Majma'ah",
+      "Backed by local expertise and a clear understanding of your needs.",
+      "Discover homes that suit you with confidence"
+    ],
+    "nav": {
+      "contact": "Contact",
+      "properties": "Show Properties"
+    },
+
+    "about": {
+      "title": "The 41 Difference",
+      "subtitle": "Redefining Luxury Living.",
+      "description1": "41 Real Estate is a dedicated office with two years of hands-on experience serving clients across the Kingdom.",
+      "description2": "We were built on a singular vision: to provide honest, personalised service in a market that demands integrity. Our local connections, commitment to transparency, and deep understanding of the Saudi property market allow us to find the right home or investment for every client — swiftly and confidently.",
+      "stats": {
+        "experience": {
+          "value": "2+",
+          "label": "Years Experience"
+        },
+        "clients": {
+          "value": "100+",
+          "label": "Happy Clients"
+        },
+        "location": {
+          "value": "KSA",
+          "label": "Based in Saudi Arabia"
+        },
+        "properties": {
+          "value": "100+",
+          "label": "Properties Listed"
+        }
+      }
+    },
+
+    "team": {
+      "title": "Our Expertise",
+      "subtitle": "Advisors",
+      "description": "Four dedicated specialists committed to finding the perfect property for you across the Kingdom.",
+      "members": [
+        {
+          "name": "Ali Al-Saadoun",
+          "role": "Real Estate Advisor",
+          "bio": "Helping clients buy, sell, and invest in prime residential and commercial properties across Saudi Arabia with honesty and dedication.",
+          "phone": "+966 50 671 7943"
+        },
+        {
+          "name": "Khaled Al-Saadoun",
+          "role": "Real Estate Advisor",
+          "bio": "Specialising in luxury residential properties, bringing deep market knowledge and a client-first approach to every deal.",
+          "phone": "+966 56 505 0004"
+        },
+        {
+          "name": "Nasser Al-Maimoni",
+          "role": "Real Estate Advisor",
+          "bio": "Focused on investment opportunities and off-plan projects, guiding clients toward the most promising assets in the market.",
+          "phone": "+966 50 843 1489"
+        },
+        {
+          "name": "Abu Bader",
+          "role": "Real Estate Advisor",
+          "bio": "A seasoned advisor with strong local connections, providing clients with trusted guidance across all property types in the Kingdom.",
+          "phone": "+966 56 535 5005"
+        }
+      ]
+    }
+  }
+}

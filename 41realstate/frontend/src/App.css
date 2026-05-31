@@ -1,0 +1,20 @@
+.ltr {
+  direction: ltr;
+  font-family: var(--font-en);
+  text-align: left;
+}
+
+.rtl {
+  direction: rtl;
+  font-family: var(--font-ar);
+  text-align: right;
+}
+.changeLang {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  border: 1.2px solid blue;
+  border-radius: 12px;
+  z-index: 10;
+}
