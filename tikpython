@@ -1,0 +1,121 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import random
+import time
+
+driver = webdriver.Chrome()
+wait = WebDriverWait(driver, 15)
+
+driver.get("https://www.tiktok.com/signup/phone-or-email/email")
+
+# ----------------------------
+# Setup Date
+# ----------------------------
+
+def setup_date():
+    # Month
+    month = wait.until(
+        EC.presence_of_element_located(
+            (By.CSS_SELECTOR, '[aria-label="Month. Double-tap for more options"]')
+        )
+    )
+
+    month_children = month.find_elements(By.XPATH, "./*")
+    month_children[0].click()
+
+    month_select = month.find_elements(By.XPATH, "./*")[1]
+    month_options = month_select.find_elements(By.XPATH, "./*")
+    month_options[0].click()
+
+    # Day
+    day = driver.find_element(
+        By.CSS_SELECTOR,
+        '[aria-label="Day. Double-tap for more options"]'
+    )
+
+    day_children = day.find_elements(By.XPATH, "./*")
+    day_children[0].click()
+
+    day_select = day.find_elements(By.XPATH, "./*")[1]
+    day_options = day_select.find_elements(By.XPATH, "./*")
+    day_options[0].click()
+
+    # Year
+    year = driver.find_element(
+        By.CSS_SELECTOR,
+        '[aria-label="Year. Double-tap for more options"]'
+    )
+
+    year_children = year.find_elements(By.XPATH, "./*")
+    year_children[0].click()
+
+    year_select = driver.find_element(
+        By.ID,
+        "Year-options-list-container"
+    )
+
+    year_options = year_select.find_elements(By.XPATH, "./*")
+    year_length = len(year_options) - 1
+
+    while True:
+        random_select_year = random.randint(0, year_length)
+
+        # Matches original JS logic
+        if random_select_year < 2007:
+            break
+
+    year_options[random_select_year].click()
+
+
+# ----------------------------
+# Setup Info
+# ----------------------------
+
+def setup_info():
+    # Email
+    email = wait.until(
+        EC.presence_of_element_located(
+            (By.NAME, "email")
+        )
+    )
+
+    email.send_keys("sam125@deltajohnsons.com")
+
+    # Password
+    password = driver.find_element(
+        By.CSS_SELECTOR,
+        'input[type="password"]'
+    )
+
+    password.send_keys("helloworld")
+
+    # Verification code input
+    code = driver.find_element(
+        By.CSS_SELECTOR,
+        'input[placeholder="Enter 6-digit code"]'
+    )
+
+    # Find button
+    button = code.find_element(By.XPATH, "../../button")
+
+    # Delay before click
+    time.sleep(3)
+    button.click()
+
+    # Email consent checkbox
+    email_consent = driver.find_element(
+        By.ID,
+        "email-consent"
+    )
+
+    email_consent.click()
+
+    # Optional wait
+    time.sleep(5)
+
+
+setup_date()
+setup_info()
